@@ -1,0 +1,29 @@
+body {
+    padding: 40px;
+}
+header {
+    display: flex;
+}
+header h1 {
+    margin-right: 40px;
+}
+header button {
+    background: #9eabd6;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0 20px;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px #cdd4da;
+}
+.hide-me {
+    border: 1px solid #9bbfe3;
+    background-color: #0099cc6c;
+    cursor: not-allowed;
+}
+
+#animal-info p {
+    border-bottom: 1px solid rgba(0, 0, 255, 0.178);
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
