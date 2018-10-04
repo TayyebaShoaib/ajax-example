@@ -47,21 +47,21 @@ btn.addEventListener('click', function () {
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', `https://learnwebcode.github.io/json-example/animals-${pageCounter}.json`);
     
-    ourRequest.onload = function() {
-        if (ourRequest.status >= 200 && ourRequest < 400)
-        {            
+    ourRequest.onload = function() 
+    {
+        if (ourRequest.status >= 200 && ourRequest.status < 400) 
+        {
             // when our browser goes to the URL and downloads the data, it doesn't know to interpret it as JSON data
             var ourData = JSON.parse(ourRequest.responseText);
             renderHTML(ourData);
-        }
+        } 
         else 
         {
-            console.log("We connected to the server but it returned an error.);
-            
-        }
+            console.log("We connected to the server but it returned an error.");
+        }    
     };
     ourRequest.onerror = function () {
-        console.log("Connection Error")
+        console.log("Connection Error");
     }
     ourRequest.send();
     pageCounter++;
